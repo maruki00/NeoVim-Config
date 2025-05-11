@@ -18,3 +18,4 @@ return {
   
     end,
   }
+--- for toggling terminal
