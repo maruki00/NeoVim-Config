@@ -16,34 +16,12 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.wo.number = true
 
-vim.keymap.set('n', '<C-S-i>', ':GoImports<CR> :GoFmt<CR>', {
-    noremap = true,
-    silent = true
-})
-vim.keymap.set('n', '<C-S-j>', ':GoAddTag json<CR>', {
-    noremap = true,
-    silent = true
-})
-vim.keymap.set('n', '<C-S-y>', ':GoAddTag yaml<CR>', {
-    noremap = true,
-    silent = true
-})
-vim.keymap.set('n', '<C-S-v>', ':GoAddTag validate:required<CR>', {
-    noremap = true,
-    silent = true
-})
-vim.keymap.set('n', '<C-S-l>', ':GoRmTag<CR> :GoFmt<CR>', {
-    noremap = true,
-    silent = true
-})
-
-
 vim.keymap.set('n', '<C-s>', ':w!<CR>', {
     noremap = true,
     silent = true
 })
 
-vim.keymap.set('n', '<C-S-z>', ':u<CR>', {
+vim.keymap.set('n', '<C-z>', ':u<CR>', {
     noremap = true,
     silent = true
 })
