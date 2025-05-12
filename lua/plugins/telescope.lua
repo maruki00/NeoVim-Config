@@ -56,5 +56,6 @@ return {
       map("n", "<leader>ff", builtin.find_files, opts) -- Lists files in your current working directory, respects .gitignore
       map("n", "<leader>fx", builtin.treesitter, opts) -- Lists tree-sitter symbols
       map("n", "<leader>fs", builtin.spell_suggest, opts) -- Lists spell options
-  end
+      map("n", "ff", function() require('telescope.builtin').lsp_document_symbols({ symbols = 'function' }) end, opts)
+    end
 }
