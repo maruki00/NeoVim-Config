@@ -189,6 +189,10 @@ return {
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
-		config = true,
+		cconfig = function()
+			require("nvim-autopairs").setup({
+				check_ts = true, -- enable Treesitter support (for smart pairing)
+			})
+		end,
 	},
 }

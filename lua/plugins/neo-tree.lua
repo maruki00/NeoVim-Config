@@ -7,7 +7,15 @@ return {
 	  "nvim-telescope/telescope.nvim",
 	  "MunifTanjim/nui.nvim",
 	},
-	config = function()
+  opts = {
+        filesystem = {
+            filtered_items = {
+				hide_dotfiles = false,
+                visible = true,
+            },
+        },
+    },
+  config = function()
 	  require("neo-tree").setup{}
 	  vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal left<CR>", {})
 	  vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})

@@ -72,12 +72,12 @@ return {{
                     capabilities = capabilities
                 })
             end,
-            -- ["tsserver"] = function()
-            --     lspconfig["tsserver"].setup({
-            --         on_attach = on_attach,
-            --         capabilities = capabilities
-            --     })
-            -- end,
+            ["tsserver"] = function()
+                lspconfig["tsserver"].setup({
+                    on_attach = on_attach,
+                    capabilities = capabilities
+                })
+            end,
             -- ["cssls"] = function()
             --     lspconfig["cssls"].setup({
             --         on_attach = on_attach,

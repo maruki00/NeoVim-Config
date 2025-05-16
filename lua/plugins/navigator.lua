@@ -34,7 +34,7 @@ return {
                 vim.api.nvim_set_keymap('n', '<C-l>', ':GoRmTag json,yaml,validate<CR>', { noremap = true, silent = true })
                 vim.api.nvim_buf_set_keymap(0, "n", "<C-j>", ":GoAddTag<CR>", {})
                 vim.api.nvim_buf_set_keymap(0, "n", "<C-y>", ":GoAddTag yaml<CR>", {})
-                vim.api.nvim_buf_set_keymap(0, "n", "<C-v>", ":GoAddTag validate:required<CR>", {})
+                vim.api.nvim_buf_set_keymap(0, "n", "<C-r>", ":GoAddTag validate:required<CR>", {})
 
                 vim.api.nvim_buf_set_keymap(0, "n", "<C-b>", ":GoBuild %:h<CR>", {})
                 vim.api.nvim_buf_set_keymap(0, "n", "<C-t>", ":GoTestPkg<CR>", {})
