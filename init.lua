@@ -31,6 +31,19 @@ vim.keymap.set('v', 'C-/', 'gc', { remap = true, desc = "Toggle comment block" }
 vim.keymap.set('n', '<C-S-Up>', '<cmd>lua require"nvim-treesitter.textobjects.repeatable".move("function", "prev")<CR>', { noremap = true, silent = true, desc = 'Previous function' })
 vim.keymap.set('n', '<C-S-Down>', '<cmd>lua require"nvim-treesitter.textobjects.repeatable".move("function", "next")<CR>', { noremap = true, silent = true, desc = 'Next function' })
 
+
+vim.keymap.set("n", "<C-i>", ":GoImports<CR>", opts)
+vim.keymap.set("n", "<C-l>", ":GoRmTag json,yaml,validate<CR>", opts)
+vim.keymap.set("n", "<C-j>", ":GoAddTag<CR>", opts)
+vim.keymap.set("n", "<C-y>", ":GoAddTag yaml<CR>", opts)
+vim.keymap.set("n", "<C-r>", ":GoAddTag validate:required<CR>", opts)
+vim.keymap.set("n", "<C-b>", ":GoBuild %:h<CR>", opts)
+vim.keymap.set("n", "<C-t>", ":GoTestPkg<CR>", opts)
+vim.keymap.set("n", "<C-c>", ":GoCoverage -p<CR>", opts)
+vim.keymap.set("n", "A", ":lua require('go.alternate').switch(true, '')<CR>", opts)
+vim.keymap.set("n", "V", ":lua require('go.alternate').switch(true, 'vsplit')<CR>", opts)
+vim.keymap.set("n", "S", ":lua require('go.alternate').switch(true, 'split')<CR>", opts)
+
   
 -- Split and close key mappings
 vim.keymap.set('n', '<leader>s', ':vsplit<CR>', { noremap = true, silent = true })
