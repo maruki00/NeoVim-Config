@@ -31,7 +31,8 @@ vim.keymap.set('v', 'C-/', 'gc', { remap = true, desc = "Toggle comment block" }
 vim.keymap.set('n', '<C-S-Up>', '<cmd>lua require"nvim-treesitter.textobjects.repeatable".move("function", "prev")<CR>', { noremap = true, silent = true, desc = 'Previous function' })
 vim.keymap.set('n', '<C-S-Down>', '<cmd>lua require"nvim-treesitter.textobjects.repeatable".move("function", "next")<CR>', { noremap = true, silent = true, desc = 'Next function' })
 
-  
+vim.api.nvim_clear_autocmds({ event = "CursorHold" })
+
 -- Split and close key mappings
 vim.keymap.set('n', '<leader>s', ':vsplit<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>h', ':split<CR>', { noremap = true, silent = true })
