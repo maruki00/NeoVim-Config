@@ -29,6 +29,9 @@ vim.opt.laststatus = 0
 -- put copied text into cleapboard when you used "y"
 vim.o.clipboard = "unnamedplus"
 
+-- autosave
+autocmd TextChanged,TextChangedI * silent write
+
 
 vim.keymap.set('v', 'C-/', 'gc', { remap = true, desc = "Toggle comment block" })
 vim.keymap.set('n', '<C-S-Up>', '<cmd>lua require"nvim-treesitter.textobjects.repeatable".move("function", "prev")<CR>', { noremap = true, silent = true, desc = 'Previous function' })
