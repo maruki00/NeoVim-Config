@@ -12,6 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 -- Key mappings for various modes
 vim.keymap.set('i', '<C-H>', '<C-w>', { desc = 'Delete word backward in insert mode' }) -- Insert mode
 vim.keymap.set('c', '<C-H>', '<C-w>', { desc = 'Delete word backward in command-line mode' }) -- Command-line mode
@@ -25,6 +26,8 @@ vim.keymap.set('v', '<C-Space-Right>', '$', { desc = 'Go to the end of the line 
 
 vim.opt.laststatus = 0
 
+-- put copied text into cleapboard when you used "y"
+vim.o.clipboard = "unnamedplus"
 
 
 vim.keymap.set('v', 'C-/', 'gc', { remap = true, desc = "Toggle comment block" })
