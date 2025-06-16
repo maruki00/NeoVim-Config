@@ -28,8 +28,5 @@ vim.keymap.set('n', '<C-z>', ':u<CR>', {
 
 vim.keymap.set('n', '<C-d>', '<cmd>lua vim.lsp.buf.definition()<CR>')
 
-vim.keymap.set('i', '<C-S-Left>', '$', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-Left>', '$', { noremap = true, silent = true })
-
-vim.keymap.set('i', '<C-S-Right>', '^', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-Right>', '^', { noremap = true, silent = true })
+vim.keymap.set('n', '-', '<cmd>foldclose<CR>')
+vim.keymap.set('n', '+', '<cmd>foldopen<CR>')
