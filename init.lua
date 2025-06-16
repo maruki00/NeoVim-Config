@@ -26,8 +26,8 @@ vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
   command = "silent! write",
 })
 
-vim.keymap.set('v', '<C-/>', 'vafgc', { remap = true, desc = "Toggle comment block" })
-
+vim.keymap.set('n', '<C-_>', 'vafgc', { remap = true, desc = "Toggle comment block" })
+vim.keymap.set('n', '<C-m>', 'vafgc', { remap = true, desc = "Toggle comment block" })
 
 vim.keymap.set('n', '<C-S-Up>', '<cmd>lua require"nvim-treesitter.textobjects.repeatable".move("function", "prev")<CR>', { noremap = true, silent = true, desc = 'Previous function' })
 vim.keymap.set('n', '<C-S-Down>', '<cmd>lua require"nvim-treesitter.textobjects.repeatable".move("function", "next")<CR>', { noremap = true, silent = true, desc = 'Next function' })
