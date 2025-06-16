@@ -39,6 +39,7 @@ vim.keymap.set('n', '<leader>h', ':split<CR>', { noremap = true, silent = true }
 -- Navigate between s
 vim.keymap.set('n', '<leader>e', ':q<CR>', { noremap = true, silent = true })  -- Close current split (buffer)
 
+
 -- Load additional configurations and plugins
 require("vim-options")
 require("lazy").setup("plugins")
