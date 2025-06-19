@@ -47,6 +47,10 @@ vim.keymap.set('n', '<leader>h', ':split<CR>', { noremap = true, silent = true }
 -- Close current window
 vim.keymap.set('n', '<leader>e', ':q<CR>', { noremap = true, silent = true })
 
+
+vim.keymap.set('n', '<leader>gf', '<cmd>GrugFar<CR>', { desc = 'Open Grug-Far' })
+
+
 -- Load additional configurations and plugins
 require("vim-options")         -- You must define this module somewhere
 require("lazy").setup("plugins")
