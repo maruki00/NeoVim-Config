@@ -22,6 +22,7 @@ return {
                 "gitignore",
                 "c",
                 "rust",
+                "python",
                 "go",
                 "php"
         },
